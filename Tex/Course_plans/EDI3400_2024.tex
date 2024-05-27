@@ -1,0 +1,205 @@
+\documentclass[12pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=1.0cm,outer=1.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw, tabularx}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\textsc{EDI 3400: Programming and Data Management} }}
+\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\textsc{Course description} }}
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+    {\LARGE \textsc{Programming and Data Management}}
+\end{center}
+\begin{center}
+    Semester: Fall 2024\\
+    %Program: Bachelor of Digital Business\\
+    Course code: EDI 3400 \\
+    BI Norwegian Business School\\
+    {\small This version: \today}
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+    \rule{\textwidth}{0.4pt}
+    \begin{minipage}[t]{\textwidth}
+        \medskip
+        \begin{tabularx}{\linewidth}{lXlX}
+            \textbf{Instructor:}   & Vegard H. Larsen                                                        & \textbf{Contact:}      & \href{mailto:vegard.h.larsen@bi.no}{vegard.h.larsen@bi.no} \medskip \\
+            \textbf{Office:}       & B3Y-075                                                                 & \textbf{Office Hours:} & Wednesdays 8--10 \medskip                                           \\
+            \textbf{Course Pages:} & \href{https://www.vegardlarsen.com/edi3400/}{vegardlarsen.com/edi3400/} & \textbf{TA:}           & TBA \medskip                                                        \\
+        \end{tabularx}\medskip
+    \end{minipage}
+    \rule{\textwidth}{0.4pt}
+\end{center}
+\vspace{.2cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+\noindent
+This course introduces Python and SQL, two of the most popular and indispensable programming languages for data analysts.
+In addition, the course covers the basics of data management with focus on relational databases.
+
+\vskip.25in
+\noindent\textbf{\large Compulsory Readings}
+\begin{enumerate}
+    \item Python for everybody: exploring data using Python 3 by \it{Charles R. Severance}
+          (\href{https://www.py4e.com/book.php}{Link})
+    \item Introduction to Python for Econometrics, Statistics and Data Analysis by \it{Kevin Sheppard}
+          (\href{https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2021.pdf}{Link})
+    \item SQL queries for mere mortals: a hands-on guide to data manipulation in SQL by \it{John L. Viescas}
+\end{enumerate}
+
+\vskip.25in
+\noindent\textbf{\large Software} \\
+In this course we will mainly be using Python.
+We will install Python through the Anaconda distribution.
+You can run into some problems if you don't have the correct version of the software installed.
+Try to install the latest version you find.
+\begin{enumerate}
+    \item \href{https://www.anaconda.com/}{Anaconda}
+    \item \href{https://sqlitebrowser.org/}{DB Browser for SQLite}
+          %\item MySQL community server, \url{https://dev.mysql.com/downloads/}
+          %\item MySQL Workbench, \url{https://dev.mysql.com/downloads/}
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{\large Supplementary Material} \\%\footnotemark
+Here are some interesting resources that will be useful during the course.
+This is not mandatory readings.
+\begin{itemize}
+    \item \href{https://docs.python.org/3/tutorial/}{Python tutorial}
+    \item \href{https://jupyter-notebook.readthedocs.io/}{Jupyter Notebook documentation}
+    \item \href{https://numpy.org/doc/}{NumPy documentation}
+    \item \href{https://pandas.pydata.org/docs/}{Pandas documentation}
+    \item \href{https://matplotlib.org/stable/users/index}{Matplotlib documentation}
+    \item \href{https://docs.python.org/3/library/sqlite3.html}{SQLite Python API documentation}
+\end{itemize}
+
+\newpage
+\noindent\textbf{\large Lecture Plan}\\
+Lectures are from ?? -- ?? on ?? unless otherwise stated.
+The plan below is tentative and subject to change.
+\begin{enumerate}
+    \item[] \underline{Lecture 1:} [Date, TBA] {\bf Introduction}
+        \begin{itemize}
+            \item Ch.1 of {\it Severance} and Ch.1 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 2:} [Date, TBA] {\bf Variables, expressions, and statements}
+        \begin{itemize}
+            \item Ch.2 and Ch.3 of {\it Severance} and Ch.2, Ch.4 and Ch.10 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 3:} [Date, TBA] {\bf Built in functions and containers}
+        \begin{itemize}
+            \item Ch.4, Ch.6, Ch.8, Ch.9, Ch.10 of {\it Severance} and Ch.23 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 4:} [Date, TBA] {\bf Loops and flow control, input and output}
+        \begin{itemize}
+            \item Ch.3, Ch.5, Ch.7, Ch.11 of {\it Severance} and Ch. 12 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 5:} [Date, TBA] {\bf The Standard Library, Functions and Classes}
+        \begin{itemize}
+            \item Ch.4, Ch.11, Ch.14 of {\it Severance} and Ch.29 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 6:} [Date, TBA] {\bf 3rd party libraries (linear algebra): Numpy}
+        \begin{itemize}
+            \item Ch.3, Ch.5, Ch.6, Ch.7, Ch.11 and Ch.19 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 7:} [Date, TBA] {\bf 3rd party libraries (data frames): Pandas}
+        \begin{itemize}
+            \item Ch.8 and Ch.16 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 8:} [Date, TBA] {\bf 3rd party libraries (graphics): Matplotlib}
+        \begin{itemize}
+            \item Ch.15 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 9:} [Date, TBA] {\bf Advanced topics: IDEs and generative AI for programming}
+        \begin{itemize}
+            \item Ch.14, Ch.15 and Ch.16 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 10:} [Date, TBA] {\bf Advanced topics: Analyzing data, probability and statistics}
+        \begin{itemize}
+            \item Ch.19 and Ch.20 of {\it Sheppard}
+        \end{itemize}
+    \item[] \underline{Lecture 11:} [Date, TBA] {\bf Introduction to relational databases}
+        \begin{itemize}
+            \item Ch.15 of {\it Severance} and Ch.1, Ch.2, Ch.3 of {\it Viescas}
+        \end{itemize}
+    \item[] \underline{Lecture 12:} [Date, TBA] {\bf SQL Basics}
+        \begin{itemize}
+            \item Ch.4, Ch.5 and Ch.6 of {\it Viescas}
+        \end{itemize}
+    \item[] \underline{Lecture 13:} [Date, TBA] {\bf Python and SQL}
+        \begin{itemize}
+            \item Ch.15 of {\it Severance}
+        \end{itemize}
+    \item[] \underline{Lecture 14:} [Date, TBA] {\bf Summing up and Q\&A}
+\end{enumerate}
+
+\newpage
+\noindent\textbf{\large Asynchronous learning: Homework/Projects} \\
+TBA
+
+%\vskip.25in
+%\noindent\textbf{\large Exercise Sessions} \\
+%TBA
+
+\vskip.25in
+\noindent\textbf{\large Exam}
+\begin{itemize}
+    \item Format: 30 hour take-home exam
+    \item Start: ??.??.2024 at 09:00
+    \item Submission deadline: ??.??.2023 at 15:00
+\end{itemize}
+
+\end{document}
