@@ -48,8 +48,13 @@ Course material should be general making it is easy to reuse for different cours
 
 ### Natural Language Processing
 #### Notebooks:
-    - Regular Expressions
-    - Tokenization
+- [Supervised methods](Notebooks/NLP/Supervised_methods.ipynb)
+- [Topic modeling](Notebooks/NLP/Topic_modeling.ipynb)
+- [Word Embeddings](Notebooks/NLP/Word_Embeddings.ipynb)
+- [Regular Expressions](Notebooks/NLP/Regular_Expressions.ipynb)
+- [Tokenization](Notebooks/NLP/Tokenization.ipynb)
+
+
     - Stemming
     - Lemmatization
     - Stop Words
@@ -57,7 +62,6 @@ Course material should be general making it is easy to reuse for different cours
     - TF-IDF
     - N-gram Model
     - Text Classification
-    - Word Embeddings
     - Word2Vec
 
 #### Slides:
@@ -77,6 +81,9 @@ Course material should be general making it is easy to reuse for different cours
 - [Principal component analysis](Notebooks/Machine_Learning/PCA.ipynb)
 - [K-means clustering](Notebooks/Machine_Learning/K_means.ipynb)
 - [Ensemble methods](Notebooks/Machine_Learning/Ensemble_methods.ipynb)
+- [Random forests](Notebooks/Machine_Learning/Random_forests.ipynb)
+- [Extra trees](Notebooks/Machine_Learning/ExtraTrees.ipynb)
+- [Bagging](Notebooks/Machine_Learning/Bagging.ipynb)
 
 
 ### Deep Learning
