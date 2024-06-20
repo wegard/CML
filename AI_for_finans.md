@@ -13,17 +13,21 @@ Kurset vil også inneholde praktiske demonstrasjoner av viktige teknologier for 
 	- Definisjon av AI
 	- Kort historie om AI som fagfelt
 	- AI i finans
-2. [Data og preprosessering](Notebooks/Data_Science/Data_og_preprosessering.ipynb)
+2. Verktøy og teknikker
+    - Python og Jupyter Notebooks
+    - Biblioteker: NumPy, Pandas, Matplotlib, Scikit-learn
+    - Eksempel: Analyse av finansielle data med Python
+3. [Data og preprosessering](Notebooks/Data_Science/Data_og_preprosessering.ipynb)
 	- Datainnsamling og rensing: Hvordan sikre nøyaktighet i AI-modeller. 
     - Datakilder og dataformater.
     - Grunnleggende statistikk: Gjennomsnitt, median, standardavvik, korrelasjon.
-3. Hva er AI?
+4. Hva er AI?
     - Symbolsk AI vs. statistisk AI?
 	- Forskjeller og forhold mellom AI, maskinlæring og dyp læring.
 	- Typer problemer som AI løser i ulike bransjer, med fokus på finans.
 	- Viktige begreper (algoritmer, modeller, trening).
     - Hva er Generativ AI?
-4. AI i praksis
+5. AI i praksis
     - Eksempler på AI i finansnæringen.
     - Hva er en AI-strategi?
     - Hvordan implementere AI i en organisasjon?
