@@ -2,6 +2,8 @@
 
 **Disclaimer:** Dette dokumentet er et førsteutkast og vil bli oppdatert fortløpende. Matrialet som beskrives er på ingen måte ferdig og vil bli endret i takt med at kurset utvikles. Mange temar vil bli dropet og nye vil bli lagt til.
 
+----------------
+
 Vi lever i en banebrytende tid hvor kunstig intelligens (AI) er i ferd med å revolusjonere hvordan vi jobber og tenker i ulike sektorer. Fra helsevesen til utdanning, fra produksjon til tjenesteytelser, opplever vi nå en omforming drevet av AI og dens uendelige muligheter. Dette kurset gir en introduksjon i de grunnleggende aspektene ved AI-teknologi, med et dykk i hvordan disse innovasjonene kan brukes til å forandre finansindustrien.
 
 ## Målgruppe:
